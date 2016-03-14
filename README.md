@@ -10,4 +10,5 @@ Each time building this image, an [Ubuntu distribution upgrade](https://github.c
 #### TODO
 
 - [ ] Add `ONBUILD` trigger instructions for more specialised HF images
+- [ ] Add base tests.
 - [ ] ...
