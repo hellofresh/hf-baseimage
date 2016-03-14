@@ -24,4 +24,4 @@ RUN apt-get update && \
 
 
 # Cleanup APT.
-RUN RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
