@@ -25,3 +25,8 @@ RUN apt-get update && \
 
 # Cleanup APT.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Register trigger to apply security patches.
+# No APT cleaning at this point, because images based on this one will probably use APT, too. 
+ONBUILD RUN apt-get update && \
+            apt-get upgrade -y -o Dpkg::Options::="--force-confold"
