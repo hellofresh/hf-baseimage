@@ -31,6 +31,11 @@ Do not forget to add the following two instructions to _your_ `Dockerfile` which
     # already part of phusion/baseimage-docker.
     CMD ["/sbin/my_init"]
 
+#### More specialised images which make use of _hf-baseimage_
+
+  - [hf-javaimage](https://github.com/hellofresh/hf-javaimage)
+
+
 #### TODO
 
 - [x] Add `ONBUILD` trigger instructions for more specialised HF images
