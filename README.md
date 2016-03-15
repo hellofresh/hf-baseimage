@@ -15,10 +15,21 @@ Each time building this image, an [Ubuntu distribution upgrade](https://github.c
 
     FROM quay.io/hellofresh/hf-baseimage
 
-Do not forget to add the following APT cleanup directive to _your_ `Dockerfile` which uses _this_ image as base:
+##### Important:
+Do not forget to add the following two instructions to _your_ `Dockerfile` which uses _this_ image as base:
+
+    # Your instructions ...
 
     # Cleanup APT.
     RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    
+    # Use baseimage-docker's init system.
+    # Reference: https://github.com/phusion/baseimage-docker#using-baseimage-docker-as-base-image
+    # ***  NOTE  ***
+    # This requires an *executable* 'run' script which has to be copied to '/etc/service/<YOUR-SERVICE>/run'
+    # At container startup time this 'run' script will be picked up by the runit supervise service which is
+    # already part of phusion/baseimage-docker.
+    CMD ["/sbin/my_init"]
 
 #### TODO
 
