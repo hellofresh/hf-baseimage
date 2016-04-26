@@ -34,6 +34,7 @@ Do not forget to add the following two instructions to _your_ `Dockerfile` which
 #### More specialised images which make use of _hf-baseimage_
 
   - [hf-javaimage](https://github.com/hellofresh/hf-javaimage)
+  - [hf-golangimage](https://github.com/hellofresh/hf-golangimage)
 
 
 #### TODO
