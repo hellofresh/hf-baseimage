@@ -15,7 +15,7 @@ Each time building this image, an [Ubuntu distribution upgrade](https://github.c
 
     FROM quay.io/hellofresh/hf-baseimage
 
-##### Important:
+##### Important Uage Note:
 Do not forget to add the following two instructions to _your_ `Dockerfile` which uses _this_ image as base:
 
     # Your instructions ...
