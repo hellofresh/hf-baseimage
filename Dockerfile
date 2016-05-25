@@ -20,7 +20,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install additional packages; execute dist upgrade.
 RUN apt-get update && \
     apt-get install -y python && \
-    apt-get upgrade -y -o Dpkg::Options::="--force-confold"
+    apt-get upgrade -y -o Dpkg::Options::="--force-confold"  # break that cache
 
 
 # Cleanup APT.
